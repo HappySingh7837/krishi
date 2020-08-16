@@ -27,7 +27,7 @@ Widget card1(String id,desp,time)
                          Expanded(child: Align( alignment: Alignment.centerLeft, child: Container(
                         color:Colors.white10,
                         padding: EdgeInsets.all(4.0),
-                        child: Text("       Order Id: $id",style: TextStyle(fontWeight: FontWeight.bold) ),
+                        child: Text("         Order Id: $id",style: TextStyle(fontWeight: FontWeight.bold) ),
             ),),), 
                  Expanded(child: Align( alignment: Alignment.centerRight, child: Container(
                    height: 30.0,
@@ -51,7 +51,7 @@ Widget card1(String id,desp,time)
                          Expanded(child: Align( alignment: Alignment.topCenter, child: Container(
                         color:Colors.white10,
                         padding: EdgeInsets.all(4.0),
-                        child: Text(" Today : $time",style: TextStyle(fontWeight: FontWeight.bold)),
+                        child: Text("Today : $time",style: TextStyle(fontWeight: FontWeight.bold)),
             ),),),
              Expanded(child: Align( alignment: Alignment.topCenter, child: Container(
                         color:Colors.white10,
@@ -65,16 +65,7 @@ Widget card1(String id,desp,time)
         title: Text('$desp',style: TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text("!2/ 2/ 002",style: TextStyle(fontSize: 15.0 ,fontWeight: FontWeight.bold)),
         trailing: Icon(Icons.missed_video_call),
-                 ),                         
-                  
-                                  
-                                   
-
-                           
-                            
-         
-          
-
+                 ),            
             ]
           )
             ),

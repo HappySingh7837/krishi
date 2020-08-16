@@ -1,13 +1,16 @@
+import 'package:injectable/injectable.dart';
 import 'package:krishi/models/datamodel.dart';
 import 'dart:async';
 
+
+@lazySingleton
   class DataService
 {
 
-static Future<Data> getNoteList() async {
+Data getNoteList()  {
 
 		
-await Future.delayed(Duration(seconds: 5));
+//await Future.delayed(Duration(seconds: 10));
 		Data noteList = Data(
       name: 'Harpreet Singh',
       address: 'Addrss from server',

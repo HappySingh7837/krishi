@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:krishi/models/datamodel.dart';
 
 import 'package:krishi/ui/views/home/home_viewmodel.dart';
 import 'package:krishi/ui/views/home/widgets.dart';
@@ -14,6 +15,7 @@ class HomeView extends StatelessWidget {
     return ViewModelBuilder<HomeViewModel>.reactive(
       builder:(
         context,model,child)=>Scaffold(
+          // onModelReady: (model) => model.getPosts(HomeViewModel<Data>(context)),
         
          backgroundColor: Colors.grey.shade200,
       appBar: AppBar(
@@ -27,29 +29,31 @@ class HomeView extends StatelessWidget {
       color: Colors.white,
       child: Container(
        color: Colors.white,
-       height: 80.0,
+       height: 60.0,
+       width: double.maxFinite,
        child: Row(
 
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[        
        SizedBox(
-         width: 170.0,
-         height: 80.0,
+         width: 180,
+         height: 100.0,
             child: RaisedButton(
                           color: Colors.green,                           
                             child: Text(
                               'OK',
                               style: TextStyle( color: Colors.white)                             
                             ),
-                            onPressed: (){                         
+                            onPressed: (){    
+                              model.futureToRun();                     
                             },                                                
                             
                           ),
                         ),
                          SizedBox(
-                           width: 170.0,
-                           height: 80.0,
+                           width: 180.0,
+                           height: 100.0,
                           child: RaisedButton(
                             child: Text(
                               'Cancel',                            
@@ -58,21 +62,21 @@ class HomeView extends StatelessWidget {
                             ),
                            ),],),),),
 
-                body:model.isBusy
-                            ? Center(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    CircularProgressIndicator(
-                                      valueColor: AlwaysStoppedAnimation(Colors.green),
-                                    ),
-                                    Text(
-                                      'Loading .....',
-                                      style: TextStyle(color: Colors.black),
-                                    )
-                                  ],
-                                ),
-                              )
+                body//:model
+                //             ? Center(
+                //                 child: Column(
+                //                   mainAxisSize: MainAxisSize.min,
+                //                   children: <Widget>[
+                //                     CircularProgressIndicator(
+                //                       valueColor: AlwaysStoppedAnimation(Colors.green),
+                //                     ),
+                //                     Text(
+                //                       'Loading .....',
+                //                       style: TextStyle(color: Colors.black),
+                //                     )
+                //                   ],
+                //                 ),
+                //               )
                               :Column(
                                 children:<Widget>
                                 [        

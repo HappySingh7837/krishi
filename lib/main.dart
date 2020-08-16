@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:krishi/app/locator.dart';
 import 'package:krishi/ui/views/home/home_view.dart';
 
 void main() {
+  setupLocator();
   runApp(MyApp());
 }
 
